@@ -73,6 +73,36 @@ Page({
         id: '2',
         name: '保险服务',
         url: '/pages/insuranceService/insuranceService'
+      },
+      {
+        id: '3',
+        name: '家政服务',
+        url: '/pages/HousekeepingService/HousekeepingService'
+      },
+      {
+        id: '4',
+        name: '交易服务',
+        url: '/pages/transactionService/transactionService'
+      },
+      {
+        id: '5',
+        name: '教育培训',
+        url: '/pages/educationService/educationService'
+      },
+      {
+        id: '6',
+        name: '保求职招聘',
+        url: '/pages/jobRecruitment/jobRecruitment'
+      },
+      {
+        id: '7',
+        name: '信息发布',
+        url: '/pages/informationRelease/informationRelease'
+      },
+      {
+        id: '2',
+        name: '广告咨询',
+        url: '/pages/advertisingConsultation/advertisingConsultation'
       }
     ],
     funnypic:[

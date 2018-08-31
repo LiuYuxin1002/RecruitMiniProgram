@@ -1,2 +1,17 @@
 <!--pages/insuranceService/insuranceService.wxml-->
-<text>123</text>
+<view class="container">
+  <!--tab导航栏-->
+  <view class="page-nav">
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+      <block wx:for="{{navdata}}">
+        <view class="nav-item {{currentTab==index?'active':''}}" data-current="{{index}}" bindtap="switchNav">{{item.text}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <!--页面内容-->
+    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">        
+        <swiper-item wx:for="{{[0,1,2]}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content">
+            {{tabItem}}
+        </swiper-item>
+    </swiper>
+</view>

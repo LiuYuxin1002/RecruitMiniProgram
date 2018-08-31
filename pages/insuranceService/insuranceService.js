@@ -5,6 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    navScrollLeft:0,
+    currentTab: 0,
+    navdata:[
+      {
+        text:'雇主责任险',
+      },
+      {
+        text:'单工伤',
+      },
+      {
+        text:'五险一金代缴',
+      }
+      
+    ]
   
   },
 
@@ -62,5 +76,30 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+    switchNav(event) {
+    var cur = event.currentTarget.dataset.current;
+    //每个tab选项宽度占1/5
+    var singleNavWidth = this.data.windowWidth / 5;
+    //tab选项居中                            
+    this.setData({
+      navScrollLeft: (cur - 2) * singleNavWidth
+    })
+    if (this.data.currentTab == cur) {
+      return false;
+    } else {
+      this.setData({
+        currentTab: cur
+      })
+    }
+  },
+  switchTab(event) {
+    var cur = event.detail.current;
+    var singleNavWidth = this.data.windowWidth * 0.3;
+    this.setData({
+      currentTab: cur,
+      navScrollLeft: (cur - 1) * singleNavWidth
+    });
   }
 })

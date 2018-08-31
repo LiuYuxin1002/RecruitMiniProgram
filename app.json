@@ -1,5 +1,6 @@
 {
   "pages": [
+   
     "pages/index/index",
     "pages/detail/detail",
     "pages/adDetail/adDetail",
@@ -10,13 +11,23 @@
     "pages/edit/edit",
     "pages/editDetail/editDetail",
     "pages/companyService/companyService",
-    "pages/insuranceService/insuranceService"
+    "pages/insuranceService/insuranceService",
+    "pages/HousekeepingService/HousekeepingService",
+    "pages/transactionService/transactionService",
+    "pages/educationService/educationService",
+    "pages/jobRecruitment/jobRecruitment",
+    "pages/informationRelease/informationRelease",
+    "pages/advertisingConsultation/advertisingConsultation",
+    "pages/informationReleaseDetail/informationReleaseDetail"
+    
+    
+
   ],
   "window": {
     "enablePullDownRefresh": false,
     "navigationBarBackgroundColor": "#1A93DF",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "大连同城供求信息"
+    "navigationBarTitleText": "力顺人力资源"
   },
   "tabBar": {
     "borderStyle": "white",
