@@ -1,111 +1,61 @@
 <page>
-  <view class="app">
-   <!--form开始-->
-   <form bindsubmit="formSubmit" bindreset="formReset">
-      <view class="pub">
-          <view class="pubLeft {{showCart ?'pubSelected':''}}" bindtap="clickCart">            
-            <text>{{firsrCart}}</text>
-              <image src="{{showCart ? '../../../images/arrowup.png' : '../../../images/arrowdown.png'}}" class="topimg topimg1"></image>      
-          </view>
-          <view class="middleline"></view>
-          <view class="pubRight {{showArea  ?'pubSelected':''}}" bindtap="clickArea">
-            <text>{{firsrArea}}</text>
-            <image src="{{showArea ? '../../../images/arrowup.png' : '../../../images/arrowdown.png'}}" 
-              class="topimg topimg2"></image>
-          </view>
-      </view>
-      
-
-      <view class="middleview"></view>
-      <!--cart开始-->
-      <view class="cartbox" wx:if="{{showCart}}">
-          <view wx:for="{{list}}" class="conitem {{num1 == item.id?'selected':''}}" data-id="{{item.id}}"  data-cart="{{item.tname}}" bindtap="cartSelect">
-            {{item.tname}}
-            
-          </view> 
-      </view>
-      <!--cart结束-->
-      <!--area开始-->
-      <view class="areabox" wx:if="{{showArea}}">
-          <view wx:for="{{areaList}}" class="conitem {{num2 == item.id?'selected':''}}" data-id="{{item.id}}"  data-area="{{item.tname}}" bindtap="areaSelect">
-            {{item.tname}}
-          </view>
-      </view>
-      <!--area结束-->
-
-
-
-
-      <!--详情页开始-->
-      <view class="detail_box" wx:if="{{showDetail}}">
-          <view class="middleview"></view>
-          <view class="group_top group_line">
-              <view class="group_left" >{{showInfo.area}}</view>
-              <input type="text" class="group_right" placeholder="{{showInfo.areaPlaceholder}}" name="area"/>
-              
-          </view>
-          <view class="group_top group_line" wx:if="{{showMoneyBox}}">
-              <text class="group_left">{{showInfo.money}}</text>
-              <input type="text"  class="group_right" placeholder="{{showInfo.moneyPlaceholder}}" class="group_right" name="money"/>
-          </view>
-
-          <!--招聘地点-->
-          <view class="group_top" wx:if="{{showAreaBox}}">
-              <text class="group_left">{{showInfo.areabox}}</text>
-              <input type="text"  class="group_right" placeholder="{{showInfo.areaboxPlaceholder}}" class="group_right" name="dd" />
-          </view>
-          <!--招聘地点-->
-  
-          <view class="middleview shop_desc" >
-            <text>{{showInfo.descript}}</text>
-          </view>
-          <view class="group_top shop_desc_input text_info">
-              <textarea  placeholder="{{showInfo.descriptPlaceholder}}" style="word-wrap : break-word;min-height:120rpx;" name="descript" auto-height />
-          </view>
-
-
-          <view class="middleview shop_desc">
-            <text>图片：</text>
-          </view>
-          <view class="weui-cell__bd" style="padding:20rpx;">
-            <view class="weui-uploader__bd overflow-inherit"   >
-              <view class="weui-uploader__files overflow-inherit">
-                <block wx:for="{{imageList}}" wx:for-item="image">
-                  <view class="weui-uploader__file" style="margin:5px;">
-                    <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
-                    <view class="del" data-index="{{index}}" bindtap="delPic"><image src="../../../images/close.png"></image></view>
-                  </view>
-                </block>
+  <view class="top_label">
+    <view class='weui-cells_after-title'></view>
+    <view class='weui-cell'>
+      <view class="head">发布信息</view>
+      <view class="notice" bindtap='noticetap'>发布须知</view>
+    </view>
+  </view>
+  <!-- 内容描述开始 -->
+  <view>
+    <text class='detail'>内容描述</text>
+    <view>
+      <textarea class="input_text" placeholder='请输入内容描述' />
+      <view class="add-picture">
+        <view class='add-picture-border'>
+          <view class="weui-uploader__files">
+            <block wx:for="{{imageList}}" wx:for-item="image">
+              <view class="weui-uploader__file">
+                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
               </view>
-              <view class="weui-uploader__input-box" style="margin:8rpx;" wx:if="{{uploadPicBtn}}">
-                <view class="weui-uploader__input" bindtap="chooseImage"></view>
-              </view>
-            </view>
+            </block>
           </view>
-
-          <view class="middleview"></view>
-          <!--地址-->
-          <view class="group_top shop_desc_input group_line" bindtap="goMap">
-              <image src="../../../images/address2.png" class="addr_icon"></image>
-              <input class="addr_word"  auto-height  value="{{location}}" placeholder="请选择地址"/> 
-              <image src="../../../images/arrowright.png" class="arrow_icon"></image>
+          <view class="weui-uploader__input-box">
+            <view class="add-icon" bindtap="chooseImage"></view>
           </view>
-          <view class="group_top shop_desc_input">
-              <image src="../../../images/telephone.png" class="tel_icon"></image>
-              <input type="text" placeholder="{{showInfo.phonePlaceholder}}" class="tel_word" name="phone"/>
-          </view>
-        
-          <view class="pub_btn">
-              <button form-type="submit" bindtap="form_reset">立即发布</button>
-          </view>
-
-
+        </view>
       </view>
-
-
-    <!--详情页结束-->
+    </view>
+  </view>
+  <!-- 内容描述结束 -->
+  <!-- 资料列表 -->
+  <view class='container'>
+    <form class="weui-cell weui-cell_text">
+      <view class="item item-input">
+        <span class="input-label"> 姓名 </span>
+        <input type="text" class="text-right" id="Name" name="Name" bindchange="bindChange" placeholder="请输入您的真实姓名" value="{{userData.Name}}" />
+      </view>
+      <view class="item item-input">
+        <span class="input-label"> 联系方式 </span>
+        <input type="text" class="text-right" id="Name" name="Name" bindchange="bindChange" placeholder="请输入您的手机号" value="{{userData.Name}}" />
+      </view>
+      <view class="item item-input">
+        <span class="input-label"> 具体位置 </span>
+        <input type="text" class="text-right" id="Name" name="Name" bindchange="bindChange" placeholder="请输入您的手机号" value="{{userData.Name}}" />
+      </view>
+      <view class="item item-input">
+        <span class="input-label"> 发帖费用 </span>
+        <input type="text" class="text-right" id="Name" name="Name" bindchange="bindChange" placeholder="请输入您的手机号" value="{{userData.Name}}" />
+      </view>
     </form>
-    <!--form结束-->
-</view>
-
+  </view>
+  <view class='weui-cell weui-cell_switch'>
+    <view class="weui-cell__bd">是否置顶</view>
+    <view class="weui-cell__ft">
+      <switch checked />
+    </view>
+  </view>
+  <view class='pay_button'>
+    <button type="primary">确认支付</button>
+  </view>
 </page>

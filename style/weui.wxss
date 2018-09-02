@@ -434,7 +434,7 @@ icon {
   margin-bottom: 9px;
   width:118rpx;
   height: 118rpx;
-  border: 1px solid #D9D9D9;
+  border: 1px solid rgb(224, 224, 224);
 }
 .weui-uploader__input-box:before,
 .weui-uploader__input-box:after {
