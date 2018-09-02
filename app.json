@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/publish/publish",
     "pages/index/index",
     "pages/detail/detail",
     "pages/adDetail/adDetail",
-    "pages/publish/publish",
+    
     "pages/publish/publishDetail/publishDetail",
     "pages/new/new",
     "pages/my/my",
