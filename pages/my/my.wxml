@@ -1,46 +1,70 @@
-<import src="../../wxParse/wxParse.wxml" />
 <view>
-  <view class="wrap">
-    <view class="app">
-      <view class="ele-container">
-        <image class="show-bac" src="../../images/bac.png"></image>
-        <view class="user-center usercenter-mode1 background-ele with-horizontal-view show-logo">
-          <view class="show-view">
-            <image class="cover-thumb" src="{{list.pic}}"></image>
-            <view class="nickname">{{list.nickname}}</view>
-          </view>
-        </view>
+  <!-- 用户信息，包括头像和昵称 -->
+  <view>
+    <block class="userInfo">
+      <image class="userInfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <view class='userInfo-nickName'>{{userInfo.nickName}}</view>
+    </block>
+  </view>
+  <!-- 用户订单；包括代付款、代发货、已完成、收款售后 -->
+  <view class="order">
+    <view class="order-head">
+      <image class="order-img" src='/images/feiji.png' />
+      <view class='order-myorder'>我的订单</view>
+      <view class='order-allorder'>查看全部订单</view>
+    </view>
+    <!-- 一条线 -->
+    <view class="line"></view>
+    <!-- 几个图标 -->
+    <view class="order-body">
+      <view class="order-item">
+        <image class="order-img1" src='/images/2.png'></image>
+        <text>待付款</text>
       </view>
+      <view class="order-item">
+        <image class="order-img1" src='/images/2.png'></image>
+        <text>待上传</text>
+      </view>
+      <view class='order-item'>
+        <image class="order-img1" src='/images/2.png'></image>
+        <text>已完成</text>
+      </view>
+      <view class='order-item'>
+        <image class="order-img1" src='/images/2.png'></image>
+        <text>退款售后</text>
+      </view>
+    </view>
+  </view>
+  <!-- 菜单列表：包括我的帖子、联系客服、帮助中心、关于我们 -->
+  <view class="menu">
+    <view class="content" bindtap="toOrderList" data-totab="全部订单">
+      <image src="../../images/serPic1.png" class="sm-img"></image>
+      <text>全部订单</text>
+      <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
     </view>
 
-    <view class="weui-cells weui-cells_after-title">
-      <navigator url="../edit/edit" class="weui-cell weui-cell_access" style="line-height:88rpx;font-size:36rpx;" hover-class="weui-cell_active">
-        <!--<view class="weui-cell__hd">
-            <image src="../../images/selected-collection.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-          </view>-->
-        <view class="weui-cell__bd">
-          <image src="../../images/feiji.png" class="feiji_icon"></image>
-          <text class="feiji_word">我的发布</text>
-        </view>
-        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-      </navigator>
-    </view>
-    <view class="about">
-      <view class="about_info">
-      </view>
-      <view class="about_tel">
-        <template is="wxParse" data="{{wxParseData:xiaoquxx.nodes}}" />
-      </view>
-    </view>
-    <view class="about_bottom">
-      <view>
-        <text>小号科技提供技术支持</text>
-      </view>
-      <view>
-        <text>http://xiaohao.51cptj.com/</text>
-      </view>
+    <view class="content" bindtap="toOrderList" data-totab="待付款">
+      <image src="../../images/serPic1.png" class="sm-img"></image>
+      <text>待付款</text>
+      <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
     </view>
 
+    <view class="content" bindtap="toOrderList" data-totab="待收货">
+      <image src="../../images/serPic1.png" class="sm-img"></image>
+      <text>待收货</text>
+      <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
+    </view>
 
+    <view class="content" bindtap="toAddr">
+      <image src="../../images/serPic1.png" class="sm-img"></image>
+      <text>收货地址</text>
+      <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
+    </view>
+
+    <view class="content flex-row" bindtap="toCoupon">
+      <image src="../../images/serPic2.png" class="sm-img"></image>
+      <text>优惠券</text>
+      <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
+    </view>
   </view>
 </view>

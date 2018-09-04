@@ -1,17 +1,13 @@
 {
   "pages": [
-<<<<<<< HEAD
-   
-=======
-    "pages/publish/publish",
->>>>>>> a7d87d4ba8df202e01aa114fd4a5f768422017d8
+    "pages/my/my",
     "pages/index/index",
     "pages/detail/detail",
     "pages/adDetail/adDetail",
-    
+    "pages/publish/publish",
     "pages/publish/publishDetail/publishDetail",
     "pages/new/new",
-    "pages/my/my",
+    
     "pages/edit/edit",
     "pages/editDetail/editDetail",
     "pages/companyService/companyService",
