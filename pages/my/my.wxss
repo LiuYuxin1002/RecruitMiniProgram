@@ -1,6 +1,12 @@
+.pages{
+  background: rgba(136, 136, 136, 0.219);
+}
+.userInfo-background{
+  background:white;
+  padding:30rpx;
+}
 .userInfo {
-  /* display: block; */
-  border: black 2rpx;
+  
 }
 
 .userInfo-avatar {
@@ -22,8 +28,8 @@
 .order {
 width: 95%;
   margin:40rpx auto;
-  padding:10rpx;
-  /* background: yellow; */
+  padding:20rpx;
+  background: white;
   border-top-width: 2rpx;
   border-top-color: black;
 }
@@ -77,7 +83,9 @@ width: 95%;
 }
 
 .menu{
-  margin:40rpx;
+  margin:0rpx;
+  /* padding:40rpx; */
+  background: white;
 }
 
 .content{

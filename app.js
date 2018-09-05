@@ -31,9 +31,18 @@ App({
           })
         }
       }
+    }),
+    wx.getUserInfo({
+      withCredentials: true,
+      lang: '',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
+  
   globalData: {
     userInfo: null
   }
+  
 })

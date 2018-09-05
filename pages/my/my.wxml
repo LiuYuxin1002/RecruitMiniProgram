@@ -1,6 +1,6 @@
-<view>
+<view class='pages'>
   <!-- 用户信息，包括头像和昵称 -->
-  <view>
+  <view class='userInfo-background' >
     <block class="userInfo">
       <image class="userInfo-avatar" src="{{userInfo.avatarUrl}}"></image>
       <view class='userInfo-nickName'>{{userInfo.nickName}}</view>
@@ -37,34 +37,30 @@
   </view>
   <!-- 菜单列表：包括我的帖子、联系客服、帮助中心、关于我们 -->
   <view class="menu">
-    <view class="content" bindtap="toOrderList" data-totab="全部订单">
+    <view class="content" bindtap="toOrderList" data-totab="我的帖子">
       <image src="../../images/serPic1.png" class="sm-img"></image>
-      <text>全部订单</text>
+      <text>我的帖子</text>
       <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
     </view>
 
-    <view class="content" bindtap="toOrderList" data-totab="待付款">
+    <view class="content" bindtap="toOrderList" data-totab="联系客服">
       <image src="../../images/serPic1.png" class="sm-img"></image>
-      <text>待付款</text>
+      <text>联系客服</text>
       <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
     </view>
 
-    <view class="content" bindtap="toOrderList" data-totab="待收货">
+    <view class="content" bindtap="toOrderList" data-totab="帮助中心">
       <image src="../../images/serPic1.png" class="sm-img"></image>
-      <text>待收货</text>
+      <text>帮助中心</text>
       <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
     </view>
 
     <view class="content" bindtap="toAddr">
       <image src="../../images/serPic1.png" class="sm-img"></image>
-      <text>收货地址</text>
+      <text>关于我们</text>
       <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
     </view>
 
-    <view class="content flex-row" bindtap="toCoupon">
-      <image src="../../images/serPic2.png" class="sm-img"></image>
-      <text>优惠券</text>
-      <image src="../../images/arrowright.png" class="sm-img pull-right"></image>
-    </view>
+    
   </view>
 </view>

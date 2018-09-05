@@ -136,11 +136,11 @@ Page({
       success: function () {
         //session 未过期，并且在本生命周期一直有效
         console.log('session 未过期');
-        app.getUserInfo();
+        wx.getUserInfo();
       },
       fail: function () {
         //登录态过期
-        app.getUserInfo();
+        wx.getUserInfo();
       }
     });
   },
