@@ -1,0 +1,48 @@
+/* pages/userinfos/userinfos.wxss */
+.page_head{
+  padding: 20rpx;
+  height: 700rpx;
+  width: 100%;
+}
+.imgs{
+  float: left;padding-top: 50rpx;
+}
+.imgs image{
+  display: block;height: 100rpx;width: 100rpx
+}
+.page_body{
+
+}
+.userinfo{
+  display: block;float:left;height: 200rpx;width: 470rpx;padding-left: 10rpx;
+}
+.name{
+  
+}
+.topposition{
+  display: block;float:left;width: 100rpx;border-radius:10rpx;
+    background-color:rgb(247, 3, 3);text-align: center;
+}
+.service{
+ 
+  margin-left: 30rpx; display: block;float:left;width: 200rpx;border-radius:10rpx;background-color:rgb(247, 3, 3);text-align: center;
+}
+.map{
+  float: left
+}
+.icons{
+  float: left
+}
+.icons image{
+  display: block;height: 50rpx;width: 50rpx
+}
+.map_position{
+  font-size: 30rpx;width: 500rpx;padding-bottom: 0;
+}
+.release{
+font-size: 25rpx;background-color:rgb(247, 3, 3);text-align: center;
+width:120rpx;float: left;margin-top: 75rpx;margin-left: 20rpx;
+}
+.text{
+  display: block;float:left;height: 200rpx;width: 500rpx;padding: 20rpx 0 0 20rpx
+}

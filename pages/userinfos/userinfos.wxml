@@ -1,0 +1,45 @@
+<!--pages/userinfos/userinfos.wxml-->
+<!--<text>pages/userinfos/userinfos.wxml</text>-->
+<view>
+  <view class="page_head">
+    <view class="imgs">
+      <image src="{{image}}"></image>
+    </view>
+    <view class="userinfo">
+      <view class="name">{{user_name}}</view>
+      <view class="info1">
+        <view class="topposition">置顶</view>
+        <view class="service">便民服务</view>
+      </view>
+      <view class="map">
+        <view class="icons">
+          <image src="{{icon}}"></image>
+        </view>
+        <view class="map_position">浙江省杭州市浙江大学紫金港校区</view>
+      </view>
+    </view>
+    <view class="release">我要发布</view>
+    <view class="text">
+      <view>
+        <textarea class="input_text" placeholder='请输入内容描述' />
+        <view class="add-picture">
+          <view class='add-picture-border'>
+            <view class="weui-uploader__files">
+              <block wx:for="{{imageList}}" wx:for-item="image">
+                <view class="weui-uploader__file">
+                  <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box">
+              <view class="add-icon" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page_body">
+  
+  </view>
+</view>
