@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/my/my",
    "pages/userinfos/userinfos",
     "pages/index/index",
 
@@ -8,7 +9,7 @@
     "pages/adDetail/adDetail",
     "pages/publish/publishDetail/publishDetail",
     "pages/new/new",
-    "pages/my/my",
+    
     "pages/edit/edit",
     "pages/editDetail/editDetail",
     "pages/companyService/companyService",
